@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 5rem auto;
+    width: 34.375rem;
+}
+
+.color-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.color-picker {
+    width: 3.25rem;
+    height: 2.25rem;
+    border-radius: 0px;
+    border: 0.5px solid #D1D5DB;
+}
+
+.color-picker::-webkit-color-swatch {
+  border: 0.5px solid #313131;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+  background: #E5E5E5;
+}
+
+.color-scheme {
+    padding: 0.5625rem 0.8125rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    width: 15.5rem;
+    box-shadow: 0 1px 2px #00000080;
+}
+
+.get-color {
+    padding: 0.5625rem 0.8125rem;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px #00000080;
+    cursor: pointer;
+}
+
+button {
+    padding: 0.3125rem 1.25rem
+}
+
+.color-bucket-container{
+    display: flex;
+    margin-top: 1.5625rem;
+}
+
+.color-bucket {
+    width: 6.875rem;
+    height: 25.875rem;
+}
+
+.hex-values {
+    display: flex;
+    justify-content: space-around;
+}
