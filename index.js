@@ -1,8 +1,6 @@
 const root = document.getElementById('root')
 const baseUrl = 'https://www.thecolorapi.com'
 const endpointScheme = '/scheme'
-let hexValue = 'F55A5A'
-let schemeValue = 'monochrome'
 let colorArray = []
 
 async function findColor(hex, scheme) {
@@ -12,19 +10,11 @@ async function findColor(hex, scheme) {
 }
 
 function setColorBucket() {
-    let html = ''
-    for (let i = 0; i < colorArray.length; i++) {
-        html += `<div class="color-bucket" style="background: ${colorArray[i]};"></div>`
-    }
-    return html;
+    return colorArray.map(color => `<div class="color-bucket" style="background: ${color};"></div>`).join('')
 }
 
 function setHex() {
-    let html = ''
-    for (let i = 0; i < colorArray.length; i++) { 
-        html += `<p>${colorArray[i]}</p>`
-    }
-    return html;
+    return colorArray.map(color => `<p>${color}</p>`).join('')
 }
 
 function render() {
@@ -60,8 +50,8 @@ function render() {
     document.getElementById('color-form').addEventListener('submit', function(e) {
         e.preventDefault()
         
-        hexValue = color.value.replace('#', '')
-        schemeValue = scheme.value
+        const hexValue = color.value.replace('#', '')
+        const schemeValue = scheme.value
         
         getColors(hexValue, schemeValue)
     })
@@ -78,4 +68,4 @@ function getColors(hex, scheme) {
         colorArray = []
     })
 }
-getColors(hexValue, schemeValue)
+getColors('F55A5A', 'monochrome')

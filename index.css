@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: slategrey
 }
 
 .container {
@@ -17,7 +18,7 @@ html, body {
     width: 3.25rem;
     height: 2.25rem;
     border-radius: 0px;
-    border: 0.5px solid #D1D5DB;
+    border: 0.1px solid #D1D5DB;
 }
 
 .color-picker::-webkit-color-swatch {
@@ -62,4 +63,5 @@ button {
 .hex-values {
     display: flex;
     justify-content: space-around;
+    color: whitesmoke;
 }
